@@ -1,0 +1,9 @@
+[user]
+	name = Timothy St. Clair
+	email = tstclair@redhat.com
+[core]
+	editory = vim
+[merge]
+	tool = meld
+[diff] 
+	external = git-meld
