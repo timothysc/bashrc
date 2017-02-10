@@ -1,0 +1,5 @@
+#!/bin/bash
+
+while true; do 
+/usr/bin/etcdctl --cert-file /etc/etcd/peer.crt --key-file /etc/etcd/peer.key --ca-file /etc/etcd/ca.crt -C https://127.0.0.1:2379 watch / -r
+done 
