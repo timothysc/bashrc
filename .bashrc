@@ -14,7 +14,8 @@ fi
 export GOPATH=~/work/spaces/Go
 export GOROOT=~/.gimme/versions/go1.7.linux.amd64
 export KPATH=$GOPATH/src/k8s.io/kubernetes
-export PATH=$KPATH/third_party/etcd:$KPATH/_output/bin:$GOROOT/bin:$GOPATH/bin:$PATH
+export SCRIPTS=$HOME/work/spaces/bashrc/scripts
+export PATH=$KPATH/third_party/etcd:$KPATH/_output/bin:$GOROOT/bin:$GOPATH/bin:$PATH:$SCRIPTS
 export KERN_DIR=/usr/src/kernels/`uname -r` 
 
 
