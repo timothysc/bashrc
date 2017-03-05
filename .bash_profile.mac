@@ -1,0 +1,9 @@
+unset GOOS;
+unset GOARCH;
+export GOROOT="/Users/tstclair/.gimme/versions/go1.7.5.darwin.amd64";
+export GOLOCAL="/Users/tstclair/work/spaces/Go"
+export GOPATH=/mnt/work/spaces/Go
+export PATH="/Users/tstclair/.gimme/versions/go1.7.5.darwin.amd64/bin:${GOLOCAL}/bin:${PATH}";
+go version >&2;
+
+export GIMME_ENV="/Users/tstclair/.gimme/envs/go1.7.5.env"
