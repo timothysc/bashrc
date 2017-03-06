@@ -28,7 +28,7 @@ go_tools_setup() {
 # TODO prompt that this is gunna overwrite a bunch of stuff.
 if echo $UNAME | grep 'Darwin'; then
 	echo "Looks like a Mac, Doing Mac Setup"
-	cat ./bash_profile >> ~/.bash_profile 
+	#cat ./bash_profile >> ~/.bash_profile 
 	PACKAGEMGR="brew"
 else 
 	echo "Looks like Linux, Doing Linux Setup"
