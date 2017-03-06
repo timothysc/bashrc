@@ -1,0 +1,41 @@
+#!/bin/bash
+
+GOVERSION=${GOVERSION:1.7.5}
+PACKAGEMGR=${PACKAGEMGR:yum}
+UNAME=`uname -a`
+
+# Visit https://marketplace.visualstudio.com/items?itemName=lukehoban.Go 
+go_tools_setup() {
+	${PACKAGEMGR} install -y curl
+	curl -sL -o ./gimme https://raw.githubusercontent.com/travis-ci/gimme/master/gimme
+	chmod +x ./gimme
+	./gimme -f ${GOVERSION}
+
+	go get -u -v github.com/nsf/gocode
+	go get -u -v github.com/rogpeppe/godef
+	go get -u -v github.com/zmb3/gogetdoc
+	go get -u -v github.com/golang/lint/golint
+	go get -u -v github.com/lukehoban/go-outline
+	go get -u -v sourcegraph.com/sqs/goreturns
+	go get -u -v golang.org/x/tools/cmd/gorename
+	go get -u -v github.com/tpng/gopkgs
+	go get -u -v github.com/newhook/go-symbols
+	go get -u -v golang.org/x/tools/cmd/guru
+	go get -u -v github.com/cweill/gotests/...
+	go get -u -v github.com/tools/godep
+}
+
+# TODO prompt that this is gunna overwrite a bunch of stuff.
+if echo $UNAME | grep 'Darwin'; then
+	echo "Looks like a Mac, Doing Mac Setup"
+	cat ./bash_profile >> ~/.bash_profile 
+	PACKAGEMGR="brew"
+else 
+	echo "Looks like Linux, Doing Linux Setup"
+	#cat .bashrc >> ~/.bashrc
+	if echo $UNAME | grep '[.]fc'; then
+		echo "Looks like Fedora, crazy bastard!"
+		PACKAGEMGR="dnf"
+	fi
+fi  
+#go_tools_setup()
