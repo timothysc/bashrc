@@ -13,10 +13,10 @@ fi
 
 # golang settings for local overrides
 # eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.7.5 bash)"
-export GOROOT=~/.gimme/versions/go1.7.5.linux.amd64
-export GIMME_ENV="/home/tstclair/.gimme/envs/go1.7.5.env"
+export GOROOT=$HOME/.gimme/versions/go1.7.5.linux.amd64
+export GIMME_ENV="$HOME/.gimme/envs/go1.7.5.env"
 
-export GOPATH=~/work/spaces/Go
+export GOPATH=$HOME/work/spaces/Go
 export KPATH=$GOPATH/src/k8s.io/kubernetes
 export HEPT=$GOPATH/src/github.com/heptio
 export TPATH=$GOPATH/src/github.com/timothysc
