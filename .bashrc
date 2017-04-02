@@ -31,3 +31,4 @@ export KUBECONFIG=/var/run/kubernetes/admin.kubeconfig
 alias grep='grep --color=auto --exclude-dir=_output --exclude=*.svg' 
 alias sudo='sudo "PATH=$PATH" -E'
 alias etcdctl='ETCDCTL_API=3 etcdctl'
+alias prettyjson='python -m json.tool'
