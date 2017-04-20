@@ -1,5 +1,5 @@
 #!/bin/bash
-SSH_MNT=${SSH_MNT:tstclair@tstvm:/home/tstclair/work}
+SSH_MNT=${SSH_MNT:tstclair@buildbox:/home/tstclair/work}
 
 sudo mkdir -p /mnt/work
 sudo sshfs -o allow_other,defer_permissions ${SSH_MNT} /mnt/work

@@ -13,6 +13,7 @@ fi
 
 # golang settings for local overrides
 # eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.7.5 bash)"
+export GOMAXPROCS=$(nproc)
 export GOROOT=$HOME/.gimme/versions/go1.7.5.linux.amd64
 export GIMME_ENV="$HOME/.gimme/envs/go1.7.5.env"
 
@@ -32,3 +33,5 @@ alias grep='grep --color=auto --exclude-dir=_output --exclude=*.svg'
 alias sudo='sudo "PATH=$PATH" -E'
 alias etcdctl='ETCDCTL_API=3 etcdctl'
 alias prettyjson='python -m json.tool'
+#TODO update alias ~= GOMAXPROCS*3
+alias kmake='make GOFLAGS="-p 10"' 
