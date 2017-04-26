@@ -2,7 +2,7 @@
 	name = Timothy St. Clair
 	email = timothysc@gmail.com
 [core]
-	editory = vim
+	editor = vim
 [merge]
 	tool = meld
 [diff] 
