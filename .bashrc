@@ -12,7 +12,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # golang settings for local overrides
-export GOVER=1.8.1
+# eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.8.3 bash)"
+export GOVER=1.8.3
 export GOMAXPROCS=$(nproc)
 export GOROOT=$HOME/.gimme/versions/go$GOVER.linux.amd64
 export GIMME_ENV="$HOME/.gimme/envs/go$GOVER.env"
@@ -34,6 +35,6 @@ alias sudo='sudo "PATH=$PATH" -E'
 alias etcdctl='ETCDCTL_API=3 etcdctl'
 alias prettyjson='python -m json.tool'
 # TODO update alias ~= GOMAXPROCS*3
-alias kmake='make GOFLAGS="-p 10"'
+alias kmake='make GOFLAGS="-p 8"'
 # TODO create alias
 # alias gimmiego = 'eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=$GOVER bash)"'
