@@ -1,4 +1,6 @@
 #!/bin/bash
+# https://gist.github.com/bastman/5b57ddb3c11942094f8d0a97d461b430 
 docker stop $(docker ps -q -a)
 docker rm  -f $(docker ps -a -q)
 docker rmi -f $(docker images -q)
+docker volume ls -qf dangling=true | xargs -r docker volume rm
