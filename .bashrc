@@ -12,8 +12,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # golang settings for local overrides
-# eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.9.1 bash)"
-export GOVER=1.9.4
+# eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.10.1 bash)"
+export GOVER=1.10.1
 export GOMAXPROCS=$(nproc)
 export GOROOT=$HOME/.gimme/versions/go$GOVER.linux.amd64
 export GIMME_ENV="$HOME/.gimme/envs/go$GOVER.env"
