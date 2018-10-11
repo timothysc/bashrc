@@ -21,7 +21,6 @@ export GIMME_ENV="$HOME/.gimme/envs/go$GOVER.env"
 export GOPATH=$HOME/work/spaces/Go
 export KPATH=$GOPATH/src/k8s.io/kubernetes
 export HEPT=$GOPATH/src/github.com/heptio
-export TPATH=$GOPATH/src/github.com/timothysc
 export SCRIPTS=$HOME/work/spaces/bashrc/scripts
 export PATH=$KPATH/third_party/etcd:$KPATH/_output/bin:$GOROOT/bin:$GOPATH/bin:$SCRIPTS:$PATH
 export KERN_DIR=/usr/src/kernels/`uname -r` 
