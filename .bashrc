@@ -12,8 +12,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # golang settings for local overrides
-# eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.10.1 bash)"
-export GOVER=1.10.1
+# eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=1.11.1 bash)"
+export GOVER=1.11.1
 export GOMAXPROCS=$(nproc)
 export GOROOT=$HOME/.gimme/versions/go$GOVER.linux.amd64
 export GIMME_ENV="$HOME/.gimme/envs/go$GOVER.env"
@@ -30,7 +30,7 @@ export KERN_DIR=/usr/src/kernels/`uname -r`
 export KUBECONFIG=$HOME/.kube/config
 # TODO - kubeadm default install and setup.
 
-alias grep='grep --color=auto --exclude-dir=_output --exclude=*.svg' 
+alias grep='grep --color=auto --exclude-dir={_output,vendor,[.]git} --exclude=*.svg' 
 alias sudo='sudo "PATH=$PATH" -E'
 alias etcdctl='ETCDCTL_API=3 etcdctl'
 alias prettyjson='python -m json.tool'
